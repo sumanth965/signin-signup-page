@@ -24,7 +24,7 @@ function Register() {
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       const decoded = jwtDecode(credentialResponse.credential);
-      const res = await axios.post('http://localhost:5000/api/auth/google', {
+      const res = await axios.post('https://su-manth09-signin-signup-page-backend.onrender.com/api/auth/google', {
         name: decoded.name,
         email: decoded.email,
       });
