@@ -13,7 +13,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', formData);
+      await axios.post('https://su-manth09-signin-signup-page-backend.onrender.com/api/auth/register', formData);
       alert("Registration successful!");
     } catch (err) {
       console.error("Register Error:", err);
