@@ -15,7 +15,7 @@ function Login() {
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/auth/login', formData);
+            const res = await axios.post('https://su-manth09-signin-signup-page-backend.onrender.com/api/auth/login', formData);
             alert("Login successful!");
             localStorage.setItem('token', res.data.token);
         } catch (err) {
@@ -27,7 +27,7 @@ function Login() {
     const handleSendOTP = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/auth/send-otp', { email });
+            await axios.post('https://su-manth09-signin-signup-page-backend.onrender.com/api/auth/send-otp', { email });
             alert("OTP sent to your email.");
             setStep('reset');
         } catch (err) {
@@ -51,7 +51,7 @@ function Login() {
         }
 
         try {
-            await axios.post('http://localhost:5000/api/auth/reset-password', {
+            await axios.post('https://su-manth09-signin-signup-page-backend.onrender.com/api/auth/reset-password', {
                 email,
                 otp: otpString,
                 password: newPassword,
