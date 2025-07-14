@@ -20,7 +20,7 @@ router.get('/google/callback',
   (req, res) => {
     const token = jwt.sign({ id: req.user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     // Redirect with token as query parameter to frontend
-    res.redirect(`https://su-manth09-signin-signup-page-backend.onrender.com?token=${token}`);
+    res.redirect(`https://su-manth09-signin-signup-page-frontend.onrender.com?token=${token}`);
   }
 );
 
