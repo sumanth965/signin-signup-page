@@ -13,7 +13,7 @@ function App() {
         <GoogleOAuthProvider clientId={clientId}>
             <Router>
                 <Routes>
-                    <Route path="/lpgin" element={<Register />} />
+                    <Route path="/login" element={<Register />} />
                     <Route path="/" element={<Login />} />
                     
                     {/* Redirect all unknown routes to Register */}
